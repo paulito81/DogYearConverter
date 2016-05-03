@@ -12,6 +12,8 @@
 		DAC420E61CD881EE0027F5E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAC420E41CD881EE0027F5E6 /* Main.storyboard */; };
 		DAC420E81CD881EE0027F5E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAC420E71CD881EE0027F5E6 /* Assets.xcassets */; };
 		DAC420EB1CD881EE0027F5E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAC420E91CD881EE0027F5E6 /* LaunchScreen.storyboard */; };
+		DAC420F51CD882190027F5E6 /* bulldog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAC420F31CD882190027F5E6 /* bulldog.jpg */; };
+		DAC420F61CD882190027F5E6 /* startup_dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DAC420F41CD882190027F5E6 /* startup_dog.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		DAC420E71CD881EE0027F5E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAC420EA1CD881EE0027F5E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAC420EC1CD881EE0027F5E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAC420F31CD882190027F5E6 /* bulldog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bulldog.jpg; sourceTree = "<group>"; };
+		DAC420F41CD882190027F5E6 /* startup_dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = startup_dog.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		DAC420DF1CD881EE0027F5E6 /* DogYearConverter */ = {
 			isa = PBXGroup;
 			children = (
+				DAC420F21CD8820F0027F5E6 /* Images */,
 				DAC420E01CD881EE0027F5E6 /* AppDelegate.swift */,
 				DAC420E21CD881EE0027F5E6 /* ViewController.swift */,
 				DAC420E41CD881EE0027F5E6 /* Main.storyboard */,
@@ -62,6 +67,15 @@
 				DAC420EC1CD881EE0027F5E6 /* Info.plist */,
 			);
 			path = DogYearConverter;
+			sourceTree = "<group>";
+		};
+		DAC420F21CD8820F0027F5E6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DAC420F31CD882190027F5E6 /* bulldog.jpg */,
+				DAC420F41CD882190027F5E6 /* startup_dog.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +139,8 @@
 				DAC420EB1CD881EE0027F5E6 /* LaunchScreen.storyboard in Resources */,
 				DAC420E81CD881EE0027F5E6 /* Assets.xcassets in Resources */,
 				DAC420E61CD881EE0027F5E6 /* Main.storyboard in Resources */,
+				DAC420F51CD882190027F5E6 /* bulldog.jpg in Resources */,
+				DAC420F61CD882190027F5E6 /* startup_dog.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -35,6 +35,7 @@ class ViewController: UIViewController {
         
         humanYearsConverterTextField.isFirstResponder()
         humanYearsConverterTextField.text = ""
+        humanYearsConverterTextField.resignFirstResponder()
         
     }
 

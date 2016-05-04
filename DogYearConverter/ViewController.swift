@@ -76,26 +76,50 @@ class ViewController: UIViewController {
         }
           // multiple with 10.5 for first two, after multiple with four
             
-        else if( humanYearsFromTextField < 2){
+        else if( humanYearsFromTextField > 0 || humanYearsFromTextField <= 2 ){
             
-            let humanYearsFromTextField = Int(humanYearsConverterTextField.text! )
+           // let humanYearsFromTextField = Int(humanYearsConverterTextField.text! )
+            let stringFromTextField = humanYearsConverterTextField.text
+            let doubleFromTextField = Double((stringFromTextField! as NSString).doubleValue)
+            let dogYearsBeforeTwo = 10.5
+            let dogYearsAfterTwo = 4.0
+            var realDogYears:Double
             
-            dogYearLabel.font = UIFont.italicSystemFontOfSize(15)
-            let yearConverter = 4
-            dogYearLabel.textColor = UIColor.blackColor()
-            dogYearLabel.hidden = false
-            dogYearLabel.text = "\(humanYearsFromTextField)"
-            
-            dogYearLabel.text = "\(humanYearsFromTextField! ) dog years is: " + "\(humanYearsFromTextField! * yearConverter)" + " years in human years"
-            
-            humanYearsConverterTextField.isFirstResponder()
-            humanYearsConverterTextField.text = ""
-            humanYearsConverterTextField.resignFirstResponder()
+            if(doubleFromTextField > 2){
+                realDogYears = (dogYearsBeforeTwo * 2) + (doubleFromTextField - 2) * dogYearsAfterTwo
+                
+                dogYearLabel.font = UIFont.italicSystemFontOfSize(15)
+               // let yearConverter = 4
+                dogYearLabel.textColor = UIColor.blackColor()
+                dogYearLabel.hidden = false
+                dogYearLabel.text = "\(humanYearsFromTextField)"
+                
+                dogYearLabel.text = "\(doubleFromTextField ) actually dog years is: " + "\(realDogYears)" + " years in human years"
+                
+                humanYearsConverterTextField.isFirstResponder()
+                humanYearsConverterTextField.text = ""
+                humanYearsConverterTextField.resignFirstResponder()
+                
+            }
+            else{
+                realDogYears = (dogYearsBeforeTwo * doubleFromTextField)
+                
+                dogYearLabel.font = UIFont.italicSystemFontOfSize(15)
+                // let yearConverter = 4
+                dogYearLabel.textColor = UIColor.blackColor()
+                dogYearLabel.hidden = false
+                dogYearLabel.text = "\(humanYearsFromTextField)"
+                
+                dogYearLabel.text = "\(doubleFromTextField ) actually dog years is: " + "\(realDogYears)" + " years in human years"
+                
+                humanYearsConverterTextField.isFirstResponder()
+                humanYearsConverterTextField.text = ""
+                humanYearsConverterTextField.resignFirstResponder()
+            }
             
         }
-        else if( humanYearsFromTextField >= 2 &&
-            
-            humanYearsFromTextField > 0){
+        /*
+        else if( humanYearsFromTextField < 2 && humanYearsFromTextField > 0){
             
               let humanYearsFromTextField = Double(humanYearsConverterTextField.text! )
             
@@ -113,7 +137,7 @@ class ViewController: UIViewController {
             
             
         }
-      
+      */
         
     }
 }

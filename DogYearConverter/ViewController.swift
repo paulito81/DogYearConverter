@@ -30,12 +30,18 @@ class ViewController: UIViewController {
         let humanYearsFromTextField = Int(humanYearsConverterTextField.text! )
         
         if( humanYearsFromTextField == nil){
+            dogYearLabel.font = UIFont.systemFontOfSize(12)
             dogYearLabel.textColor = UIColor.redColor()
-            dogYearLabel.text = "Error, please insert a whole number!"
+            dogYearLabel.text = "Error you have not inserted a value, please insert a whole number!"
             
+        }
+        if(humanYearsFromTextField < 0){
+            dogYearLabel.font = UIFont.systemFontOfSize(12)
+            dogYearLabel.text = "Error you have inserted a minus value, please insert a positive whole number!"
         }
         else
         {
+            dogYearLabel.font = UIFont.italicSystemFontOfSize(15)
             let yearConverter = 7
             dogYearLabel.textColor = UIColor.blackColor()
             dogYearLabel.hidden = false

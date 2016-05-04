@@ -26,13 +26,25 @@ class ViewController: UIViewController {
 
     @IBAction func converterButtonPressed(sender: UIButton) {
         
+        
         let humanYearsFromTextField = Int(humanYearsConverterTextField.text! )
-        let yearConverter = 7
-        dogYearLabel.hidden = false
-        dogYearLabel.text = "\(humanYearsFromTextField)"
         
-        dogYearLabel.text = "\(humanYearsFromTextField! ) dog years is: " + "\(humanYearsFromTextField! * yearConverter)" + " years in human years"
-        
+        if( humanYearsFromTextField == nil){
+            dogYearLabel.textColor = UIColor.redColor()
+            dogYearLabel.text = "Error, please insert a whole number!"
+            
+        }
+        else
+        {
+            let yearConverter = 7
+            dogYearLabel.textColor = UIColor.blackColor()
+            dogYearLabel.hidden = false
+            dogYearLabel.text = "\(humanYearsFromTextField)"
+            
+            dogYearLabel.text = "\(humanYearsFromTextField! ) dog years is: " + "\(humanYearsFromTextField! * yearConverter)" + " years in human years"
+            
+        }
+       
         humanYearsConverterTextField.isFirstResponder()
         humanYearsConverterTextField.text = ""
         humanYearsConverterTextField.resignFirstResponder()
